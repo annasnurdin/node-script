@@ -7,6 +7,6 @@ writer.end()
 
 const render = fs.createReadStream("target.log")
 render.on("data", function(data){
-  console.info(data.toString())
+  console.info(data.toString()) //datanya buffer
   render.close
 })
