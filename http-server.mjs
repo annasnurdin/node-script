@@ -4,11 +4,21 @@ const server = http.createServer((req, res) => {
   // console.info(req, "req")
   console.info(req.method)
   console.info(req.url)
-  console.info(req.headers)
+  // console.info(req.headers)
   console.info(req.statusCode)
 
-  res.write("Hellow") // yang ditampilkan ke client
-  res.end()
+  if (req.method === "POST") {
+    req.addListener("data", (data) => {
+      res.setHeader("content-type", "application/json")
+      res.write(data)
+      res.end()
+    })
+  } else {
+    res.write("Hellow") // yang ditampilkan ke client
+    res.end()
+  }
+
+  
 })
 
 server.listen(3000)
