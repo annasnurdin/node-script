@@ -1,7 +1,7 @@
 {
-  "name": "belajar-nodejs-unit-test",
+  "name": "node-js-unit-test-logger",
   "version": "1.0.0",
-  "description": "Belajar NodeJS Unit Test",
+  "description": "Learn Node JS unit test",
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
@@ -27,7 +27,7 @@
       "!vendor/**/*.{js,jsx}"
     ]
   },
-  "author": "Eko Kurniawan Khannedy",
+  "author": "Annas",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.17.12",
