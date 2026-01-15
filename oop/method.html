@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class</title>
+</head>
+<script>
+  class Person {
+    constructor(name){
+      this.name = name;
+    }
+    sayHello(name){ // ini masuk ke prototype 
+      console.info(`Hellow, ${name}, my name is ${this.name}`)
+    }
+  }
+  const annas = new Person("annas")
+  console.info(annas)
+  console.info("property " + annas.name)
+  console.info(annas.sayHello("purwo"))
+</script>
+<body>
+  
+</body>
+</html>
