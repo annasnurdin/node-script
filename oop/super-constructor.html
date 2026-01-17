@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Constructor</title>
+  <script>
+    class Employee {
+      constructor(firstName){
+        this.firstName = firstName;
+      }
+      sayHellow(name){
+        console.info(`Hellow, ${name}! My name is employee ${this.firstName}`)
+      }
+    }
+    class Manager extends Employee {
+      sayHellow(name){
+        console.info(`Hellow, ${name}! My name is manager ${this.firstName}`)
+      }
+    }
+
+    const annas = new Employee("Annas")
+    annas.sayHellow("Karin")
+
+    const purwo = new Manager("Purwos")
+    // purwo.firstName = "Purwo" <= sudah tidak perlu lagi pakai .firstName karena sudah diturunkan dari employee yang sudah ada constructornya
+    purwo.sayHellow("Brodi")
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
