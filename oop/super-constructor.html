@@ -14,15 +14,19 @@
       }
     }
     class Manager extends Employee {
+      constructor(firstName, lastName){
+        super(firstName) //karena di parent ada constructor, maka child harus panggil constructor parentnya juga
+        this.lastName = lastName
+      }
       sayHellow(name){
-        console.info(`Hellow, ${name}! My name is manager ${this.firstName}`)
+        console.info(`Hellow, ${name}! My name is manager ${this.firstName} ${this.lastName}`)
       }
     }
 
     const annas = new Employee("Annas")
     annas.sayHellow("Karin")
 
-    const purwo = new Manager("Purwos")
+    const purwo = new Manager("Purwos", "Ganteng")
     // purwo.firstName = "Purwo" <= sudah tidak perlu lagi pakai .firstName karena sudah diturunkan dari employee yang sudah ada constructornya
     purwo.sayHellow("Brodi")
   </script>
